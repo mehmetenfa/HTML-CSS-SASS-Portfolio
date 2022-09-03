@@ -3,8 +3,26 @@
 //**************************
 
 .home-bgImg-container {
-    border: 2px solid red;
-    background-image: url('../../img/model-1.jpg');
-    height: 100vh;
-    background-position: center center;
+    @include bgImage(100vh, $main-bgImage-path)
+}
+
+.home {
+    // border: 2px solid red;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    &__name {
+        font-size: 5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid white;
+
+        &--last {
+            color: red;
+            font-weight: 700;
+        }
+    }
 }
